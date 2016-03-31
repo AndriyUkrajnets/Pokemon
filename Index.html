@@ -1,13 +1,15 @@
 <html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<title>Pokemon</title>
 	<script type="text/javascript">
+	
     $.get("http://pokeapi.co/api/v2/pokemon/1/", function(data){
     	$("h1").html(data.name);
         alert("Load was performed");
 	});
 	</script>
-	<title>Hello</title>
+	
 </head>
 <body>
 <h1> Hello World!!! </h1>
