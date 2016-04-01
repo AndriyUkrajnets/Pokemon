@@ -1,0 +1,168 @@
+.form{
+	    border: 3px solid #B0C4DE;
+	    width: 150px;
+	    height: 250px;
+	    margin: 0 30px 20px 0;
+	    transition: box-shadow 0.7s;
+    }
+.form:hover{
+	    box-shadow: 0 0 6px #B0C4DE;
+	    transition: box-shadow 0.3s;
+    }
+.title{
+  		position: relative;
+  		border: 7px solid #B0C4DE;
+	    width: 500px;
+	    height: 100px;
+	    left: 20%;
+  	}
+.holder{
+  		display: inline;
+  		float: right;
+  	}
+.row{
+  		content: "Row-content";
+  		display: table;
+  		clear: both;
+  	}
+.grid{
+  		float: none;
+  		margin: 100px 0 0 50px;
+  	}
+.col-0-5{
+  		float: left;
+  		width: 90%;
+  	}
+.col-0-6{    
+    width: 50%;
+    min-height: 150px;
+    background: #ccc;
+    float: left;
+}
+.picture{
+  		float: left;
+  		border: 0px;
+  		margin: 10px 10px 10px 10px;
+  	}
+.abilities{
+      content: "some abilities content";
+      clear: both;
+      display: table;
+  		margin: 20px 8px 0 2px;
+  	}
+.hidden-info{
+  display: none;
+}
+.name{
+  		text-align: center;
+  		font-weight: bold;
+  		font-size: 1.375em;
+  		font-family: Georgia, serif;
+  		text-transform: capitalize;
+      color: #1D0772;
+  	}
+.profile-image{
+      max-width: 50%;
+      margin: 20px 0 0 80px;
+    }
+.profile{
+      border: 1px solid #ddd;
+      width: 300px;
+      height: 450px;
+      position: fixed;
+      float: center;
+    }
+#character{
+      display: none;
+    }
+
+#Pokemon-details {
+  border: 1px solid #73FFC9;
+  position:fixed;
+  width:220px;
+  height:380px;
+  background-color:#F5FFFF;
+  right:110px;
+  top:195px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px #888888;
+}
+.pokemon-name-profile{
+  		text-align: center;
+      margin: 20px 0 0 0;
+      font-size: 1.375em;
+      font-weight: bold;
+      font-family: Georgia, serif;
+  	}
+.abilities-profile{
+  	}
+article{
+  		text-align: center;
+  		font-size: 70px;
+  		margin: 7px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: solid #B0C4DE;
+  	}
+.button{
+  		float: left;
+  		position: absolute;
+  		margin: 0 0 55px 0;
+  	}
+.load-more{
+  		background-color: #008CBA;
+  		border-radius: 4px;
+  		border: none;
+    	color: white;
+  		padding: 12px 285px;
+    	text-align: center;
+     	text-decoration: none;
+    	display: inline-block;
+    	font-size: 16px;
+      font-weight: bold;
+  	}
+footer{
+      background-color: black;
+      position: relative;
+      margin: 90px 0 0 0;
+      text-align: center;
+      text-decoration: none;
+      display: none;
+      font-size: 12px;
+      font-weight: bold;
+      width: auto;
+      padding-top: 50px;
+      padding-bottom: 10px;
+      color: white;
+    }
+.type{
+      display: inline;
+      border-radius: 4px;
+      text-align: center;
+      padding: 4px 20px;
+      border: 1px solid #ddd;
+      margin: 8px;
+      text-transform: capitalize;
+    }
+.electric{
+      background-color: #F8D030;
+    }
+.poison{
+      background-color: #A040A0;
+    }
+.grass{
+      background-color: #78C850;
+    }
+.fire{
+      background-color: #F08030;
+    }
+.bug{
+      background-color: #A8B820;
+    }
+.water{
+      background-color: #6890F0;
+    }
+.flying{
+      background-color: #A890F0;
+    }
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security 
