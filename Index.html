@@ -1,17 +1,206 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<title>Pokemon</title>
-	<script type="text/javascript">
-	
-    $.get("http://pokeapi.co/api/v2/pokemon/1/", function(data){
-    	$("h1").html(data.name);
-        alert("Load was performed");
-	});
-	</script>
-	
-</head>
-<body>
-<h1> Hello World!!! </h1>
-</body>
+  <head>
+    <meta charset="UTF-8">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	    	<title>Pokemons</title>
+	    <script type="text/javascript" src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="css_styles.css">
+  </head>
+  <body>
+	<div class="title">
+		<article>Pokedex</article>
+	</div>
+	<div class="grid">
+		<div class="col-0-5">
+			<div>
+				<div class="row">
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/1.png">
+							</div>
+							<div class="name" id="pokemon-1">Bulbasaur</div>
+							<div class="abilities" id="ability-1"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/2.png">
+							</div>
+							<div class="name" id="pokemon-2">Ivysaur</div>
+							<div class="abilities" id="ability-2"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/3.png">
+							</div>
+							<div class="name" id="pokemon-3">Venusaur</div>
+							<div class="abilities" id="ability-3"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/4.png">
+							</div>
+							<div class="name" id="pokemon-4">Charmander</div>
+							<div class="abilities" id="ability-4"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/5.png">
+							</div>
+							<div class="name" id="pokemon-5">Charmeleon</div>
+							<div class="abilities" id="ability-5"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/6.png">
+							</div>
+							<div class="name" id="pokemon-6">pokemon-6</div>
+							<div class="abilities" id="ability-6"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/7.png">
+							</div>
+							<div class="name" id="pokemon-7">pokemon-7</div>
+							<div class="abilities" id="ability-7"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/8.png">
+							</div>
+							<div class="name" id="pokemon-8">pokemon-8</div>
+							<div class="abilities" id="ability-8"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/9.png">
+							</div>
+							<div class="name" id="pokemon-9">pokemon-9</div>
+							<div class="abilities" id="ability-9"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/10.png">
+							</div>
+							<div class="name" id="pokemon-10"></div>
+							<div class="abilities" id="ability-10"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/11.png">
+							</div>
+							<div class="name" id="pokemon-11"></div>
+							<div class="abilities" id="ability-11"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+					<div class="holder">
+						<div class="form">
+							<div class="picture">
+								<img src="http://pokeapi.co/media/img/12.png">
+							</div>
+							<div class="name" id="pokemon-12"></div>
+							<div class="abilities" id="ability-12"></div>
+							<div class="hidden-info"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="button">
+					<a href="" target="_blank" class="load_more">Load More Pokemons</a>
+				</div>
+		</div>
+		<div class="col-0-5">
+			<div class="profile" id="character">
+				<div class="picture-profile"></div>
+				<div class="pokemon-name-profile"></div>
+				<div class="abilities-profile"></div>
+			</div>
+		</div>
+	</div>
+
+<div class="col-0-6">
+    <div id="Pokemon-details" class="profile"> 
+				<div class="picture-profile"></div>
+				<div class="pokemon-name-profile"></div>
+				<div class="abilities-profile"></div>
+			<table border="1" style="width:100%">
+			  <tr>
+			    <td>Type</td>
+			    <td></td>
+			  </tr>
+			  <tr>
+			    <td>Attack</td>
+			    <td></td>
+			  </tr>
+			  <tr>
+			    <td>Defense</td>
+			    <td></td>
+			  </tr>
+			  <tr>
+			    <td>HP</td>
+			    <td></td>
+			  </tr>
+			  <tr>
+			    <td>SP Attack</td>
+			    <td></td>
+			  </tr>
+			  <tr>
+			    <td>SP Defense</td>
+			    <td></td>
+			  </tr>
+			  <tr>
+			    <td>Speed</td>
+			    <td></td>
+			  </tr>
+			  <tr>
+			    <td>Weight</td>
+			    <td></td>
+			  </tr>
+			  <tr>
+			    <td>Total moves</td>
+			    <td>rrrrrrrrr</td>
+			  </tr>
+			</table>
+	</div>
+	<footer>&copy; 2016 All Rights Reserved.
+	</footer>
+  </body>
 </html>
