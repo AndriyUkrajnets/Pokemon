@@ -1,9 +1,10 @@
 .form{
 	    border: 3px solid #B0C4DE;
-	    width: 150px;
+	    width: 200px;
 	    height: 250px;
 	    margin: 0 30px 20px 0;
 	    transition: box-shadow 0.7s;
+      border-radius: 12px;
     }
 .form:hover{
 	    box-shadow: 0 0 6px #B0C4DE;
@@ -15,6 +16,7 @@
 	    width: 500px;
 	    height: 100px;
 	    left: 20%;
+      border-radius: 12px;
   	}
 .holder{
   		display: inline;
@@ -29,20 +31,16 @@
   		float: none;
   		margin: 100px 0 0 50px;
   	}
-.col-0-5{
+.main-pokedex{
   		float: left;
   		width: 90%;
   	}
-.col-0-6{    
-    width: 50%;
-    min-height: 150px;
-    background: #ccc;
-    float: left;
+.abilities-pokedex{    
 }
 .picture{
-  		float: left;
+  		float: center;
   		border: 0px;
-  		margin: 10px 10px 10px 10px;
+  		margin: 10px 10px 10px 40px;
   	}
 .abilities{
       content: "some abilities content";
@@ -51,7 +49,7 @@
   		margin: 20px 8px 0 2px;
   	}
 .hidden-info{
-  display: none;
+      display: none;
 }
 .name{
   		text-align: center;
@@ -77,15 +75,15 @@
     }
 
 #Pokemon-details {
-  border: 1px solid #73FFC9;
-  position:fixed;
-  width:220px;
-  height:380px;
-  background-color:#F5FFFF;
-  right:110px;
-  top:195px;
-  border-radius: 12px;
-  box-shadow: 2px 2px 2px #888888;
+      border: 1px solid #73FFC9;
+      position:fixed;
+      width:220px;
+      height:380px;
+      background-color:#F5FFFF;
+      right:110px;
+      top:195px;
+      border-radius: 12px;
+      box-shadow: 2px 2px 2px #888888;
 }
 .pokemon-name-profile{
   		text-align: center;
@@ -105,8 +103,12 @@ article{
   	}
 .button{
   		float: left;
+      border: 2px solid #E0E0FF;
   		position: absolute;
   		margin: 0 0 55px 0;
+      background-color: #9999FF;
+      padding: 10px 10px 10px 10px;
+      border-radius: 5px;
   	}
 .load-more{
   		background-color: #008CBA;
@@ -144,25 +146,25 @@ footer{
       text-transform: capitalize;
     }
 .electric{
-      background-color: #F8D030;
+      background-color: #662695;
     }
 .poison{
-      background-color: #A040A0;
+      background-color: #FFFF00;
     }
 .grass{
-      background-color: #78C850;
+      background-color: #7CFC00;
     }
 .fire{
-      background-color: #F08030;
+      background-color: #FF2626;
     }
 .bug{
-      background-color: #A8B820;
+      background-color: #808000;
     }
 .water{
-      background-color: #6890F0;
+      background-color: #0000FF;
     }
 .flying{
-      background-color: #A890F0;
+      background-color: #9999FF;
     }
 Status API Training Shop Blog About
 © 2016 GitHub, Inc. Terms Privacy Security 
