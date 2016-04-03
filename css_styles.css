@@ -4,7 +4,6 @@
 	    height: 250px;
 	    margin: 0 30px 20px 0;
 	    transition: box-shadow 0.7s;
-      border-radius: 12px;
     }
 .form:hover{
 	    box-shadow: 0 0 6px #B0C4DE;
@@ -16,7 +15,6 @@
 	    width: 500px;
 	    height: 100px;
 	    left: 20%;
-      border-radius: 12px;
   	}
 .holder{
   		display: inline;
@@ -75,15 +73,12 @@
     }
 
 #Pokemon-details {
-      border: 1px solid #73FFC9;
+      border: 2px solid #B0C4DE;
       position:fixed;
       width:220px;
       height:380px;
-      background-color:#F5FFFF;
       right:110px;
       top:195px;
-      border-radius: 12px;
-      box-shadow: 2px 2px 2px #888888;
 }
 .pokemon-name-profile{
   		text-align: center;
