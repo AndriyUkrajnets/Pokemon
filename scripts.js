@@ -30,7 +30,7 @@ for(var i = 1; i < 13; i++) {
     	}
 
     parseData(data);
-    $('#profile').html(
+    $('#profile-row').html(
       div('Name') + div(currentInfo.name) + 
       div('Type') + div(currentInfo.types[0]) + 
       div('Attack') + div(currentInfo.attack) +
@@ -66,6 +66,7 @@ for(var i = 1; i < 13; i++) {
     }
   });
 };
+
 
 $(function(){
 var previous = "none";
