@@ -1,12 +1,13 @@
-var currentInfo = {}
-
-var div = function(v){
-  return '<div>' + v + '</div>'
-}
+$( document ).ready(function() {
+    $(".holder").click(function(event){
+  $("#Pokemon-details").html($(event.target).children(".hidden-info").html());
+  })
 
 var row = function(name, v){
   return '<tr><td>' + name + '</td><td>' + v + '</td></tr>'
 }
+
+var currentInfo = {}
 
 var parseData = function(d){
   currentInfo.name = d.name
@@ -24,25 +25,12 @@ var parseData = function(d){
 
 for(var i = 1; i < 13; i++) {
   $.get("http://pokeapi.co/api/v2/pokemon/" +i, function (data){
-  	for (var z = 0; z < data.types.length; z++) {
-  		data.types[z].type.name
-  		$("#pokemon-" + (data.id)).html(data.name);     
-    	}
+    for (var z = 0; z < data.types.length; z++) {
+      data.types[z].type.name
+      $("#pokemon-" + (data.id)).html(data.name);     
+      }
 
     parseData(data);
-    $('#profile-row').html(
-      div('Name') + div(currentInfo.name) + 
-      div('Type') + div(currentInfo.types[0]) + 
-      div('Attack') + div(currentInfo.attack) +
-      div('Defense') + div(currentInfo.attack) +
-      div('HP') + div(currentInfo.attack) +
-      div('SP Attack') + div(currentInfo.attack) +
-      div('SP Defense') + div(currentInfo.attack) +
-      div('Speed') + div(currentInfo.attack) +
-      div('Weight') + div(currentInfo.weight) +
-      div('Total Moves') + div(currentInfo.totalMoves)
-    )
-
     $('#profile-table').html(
       '<table>' +
       row('Name', currentInfo.name) +
@@ -63,16 +51,26 @@ for(var i = 1; i < 13; i++) {
       prefContent = $("#ability-" + (data.id)).html()
       typeContent = prefContent + "<div class=\""+ data.types[y].type.name +" type\">"+ data.types[y].type.name +"</div>"
       $("#ability-" + (data.id)).html(typeContent);
-    }
-  });
-};
+      }
+    })
+  }
+})
+
+/*function displ(loadMore) {
+  if (document.getElementById(loadMore).style.display == 'none') {
+    document.getElementById(loadMore).style.display = 'block'} 
+    else {document.getElementById(loadMore).style.display = 'none'} 
+};*/
 
 
-$(function(){
+
+
+
+/*$(function(){
 var previous = "none";
 $(".form").click(function(e){
-	current = $(e.target).parents(".form").children(".pokemon-name").children("input").val();
-	$("#character").html($(e.target).parents(".form").children(".hidden-info").html());
+  current = $(e.target).parents(".form").children(".pokemon-name").children("input").val();
+  $("#character").html($(e.target).parents(".form").children(".hidden-info").html());
     if(previous == current){
         $("#character").css('display','none');
         previous = "none";
@@ -81,7 +79,7 @@ $(".form").click(function(e){
         previous = current;
     }
   });
-});
+});*/
 
 // Status API Training Shop Blog About
 // © 2016 GitHub, Inc. Terms Privacy Security Co
