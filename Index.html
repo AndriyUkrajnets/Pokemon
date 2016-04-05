@@ -2,169 +2,209 @@
 <html>
   <head>
     <meta charset="UTF-8">
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	    	<title>Pokemons</title>
-	    <script type="text/javascript" src="scripts.js"></script>
-    <link rel="stylesheet" type="text/css" href="css_styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <title>Pokedex</title>
+          <script type="text/javascript" src="scripts.js"></script>
+          <link rel="stylesheet" type="text/css" href="css_styles.css">
   </head>
-  <body>
-	<div class="title">
-		<article>Pokedex</article>
-	</div>
-	<div class="grid">
-		<div class="main-pokedex">
-			<div>
-				<div class="row">
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/1.png">
-							</div>
-							<div class="name" id="pokemon-1">1</div>
-							<div class="abilities" id="ability-1"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-					<div class="holder">
-						
-							<div class="form">
-								<div class="picture">
-									<img src="http://pokeapi.co/media/img/2.png">
-								</div>
-								<div class="name" id="pokemon-2">2</div>
-								<div class="abilities" id="ability-2"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/3.png">
-							</div>
-							<div class="name" id="pokemon-3">3</div>
-							<div class="abilities" id="ability-3"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/4.png">
-							</div>
-							<div class="name" id="pokemon-4">4</div>
-							<div class="abilities" id="ability-4"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/5.png">
-							</div>
-							<div class="name" id="pokemon-5">5</div>
-							<div class="abilities" id="ability-5"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/6.png">
-							</div>
-							<div class="name" id="pokemon-6">6</div>
-							<div class="abilities" id="ability-6"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/7.png">
-							</div>
-							<div class="name" id="pokemon-7">7</div>
-							<div class="abilities" id="ability-7"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/8.png">
-							</div>
-							<div class="name" id="pokemon-8">8</div>
-							<div class="abilities" id="ability-8"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/9.png">
-							</div>
-							<div class="name" id="pokemon-9">9</div>
-							<div class="abilities" id="ability-9"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-				</div>
 
-				<!-- <div id="LoadMore"><a href="javascript: displ('var')">LOAD MORE</a></div>
-				<div id="var" style="display: none;">  -->
 
-				<div class="row">
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/10.png">
-							</div>
-							<div class="name" id="pokemon-10">10</div>
-							<div class="abilities" id="ability-10"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/11.png">
-							</div>
-							<div class="name" id="pokemon-11">11</div>
-							<div class="abilities" id="ability-11"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-					<div class="holder">
-						<div class="form">
-							<div class="picture">
-								<img src="http://pokeapi.co/media/img/12.png">
-							</div>
-							<div class="name" id="pokemon-12">12</div>
-							<div class="abilities" id="ability-12"></div>
-							<div class="hidden-info"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="button">
-					<a href="" target="_blank" class="load_more">Load More Pokemons</a>
-				</div>
-		</div>
-	</div>
 
-	<!-- <div id="LoadMore2"><a href="javascript: displ('var')">CLOSE</a></div> -->
+<body>
+  <div class="pokedexHead">Pokedex</div>
+    <div id="rectangle1" class="rectangle pokemon">
+      <img src="http://pokeapi.co/media/img/1.png" width="100" height="100">
+        <div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+        <div class="abilities" id="ability-1"></div>
+          <div class="hidden-info"></div>
+    </div>
 
-	<div class="abilities-pokedex">
-	    <div id="Pokemon-details" class="holder"> 
-			<!-- <div class="picture-profile"></div> -->
-			<div id="profile-table"> </div>
-			<div class="pokemon-name-profile"></div>
-			<!-- <div class="abilities-profile"></div> -->
-		</div>
-	</div>
-	<footer>&copy; 2016 All Rights Reserved.
-	</footer>
-  </body>
+    <div id="rectangle2" class="rectangle pokemon">
+      <img src="http://pokeapi.co/media/img/2.png" width="100" height="100">
+        <div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+        <div class="abilities" id="ability-2"></div>
+          <div class="hidden-info"></div>
+    </div>
+
+    <div id="rectangle3" class="rectangle pokemon">
+      <img src="http://pokeapi.co/media/img/3.png" width="100" height="100">
+        <div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+        <div class="abilities" id="ability-3"></div>
+          <div class="hidden-info"></div>
+    </div>
+  <br/>
+
+<div id="rectangle4" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/4.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-4"></div>
+<div class="hidden-info"></div>
+
+</div>
+
+<div id="rectangle5" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/5.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-5"></div>
+<div class="hidden-info"></div>
+
+</div>
+
+<div id="rectangle6" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/6.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-6"></div>
+<div class="hidden-info"></div>
+</div>
+
+<br/>
+<div id="rectangle7" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/7.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-7"></div>
+<div class="hidden-info"></div>
+</div>
+
+<div id="rectangle8" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/8.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-8"></div>
+<div class="hidden-info"></div>
+
+</div>
+
+<div id="rectangle9" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/9.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-9"></div>
+<div class="hidden-info"></div>
+</div>
+<!-- <div id="var" style="display: none;">  -->
+
+<br/>
+<div id="rectangle10" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/10.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-10"></div>
+<div class="hidden-info"></div>
+</div>
+
+<div id="rectangle11" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/11.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-11"></div>
+<div class="hidden-info"></div>
+
+</div>
+
+<div id="rectangle12" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/12.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-12"></div>
+<div class="hidden-info"></div>
+
+</div>
+
+<br/>
+<div id="rectangle13" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/13.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-13"></div>
+<div class="hidden-info"></div>
+
+</div>
+
+<div id="rectangle14" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/14.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-14"></div>
+<div class="hidden-info"></div>
+
+</div>
+<div id="rectangle15" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/15.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-15"></div>
+<div class="hidden-info"></div>
+
+</div>
+
+<br/>
+<div id="rectangle16" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/16.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-16"></div>
+<div class="hidden-info"></div>
+</div>
+
+<div id="rectangle17" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/17.png" width="100" height="100">
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-17"></div>
+<div class="hidden-info"></div>
+
+</div>
+
+<div id="rectangle18" class="rectangle pokemon">
+<img src="http://pokeapi.co/media/img/18.png" width="100" height="100">
+<div class="name"align="center" style="width:auto; height:auto; position:relative; float:none;"></div>
+<div class="abilities" id="ability-18"></div>
+<div class="hidden-info"></div>
+</div>
+<div id="LoadMore"><a href="javascript: displ('var')">LOAD MORE</a></div>
+
+
+</div>
+
+<div class="div200">
+    <div id="rectangle-profile" class="pokemon">
+    <div id="imageRectangle19"><img src="http://pokeapi.co/media/img/34.png"></div>
+
+<div align="center" style="width:auto; height:auto; position:relative; float:none;">
+<font size="4px" face="Verdana";>Pokemon Name</font></div>
+  
+<table border="1" style="width:100%" border-collapse="collapse" >
+  <tr>
+    <td><font size="3px" face="Verdana" color="black";>Type</font></td>
+    <td><font size="3px" face="Verdana" color="black"; >value</td>
+  </tr>
+  <tr>
+    <td><font size="3px" face="Verdana" color="black";>Attack</td>
+    <td><font size="3px" face="Verdana" color="black";>value</td>
+  </tr>
+  <tr>
+    <td><font size="3px" face="Verdana" color="black";>Defense</td>
+    <td><font size="3px" face="Verdana" color="black";>value</td>
+  </tr>
+  <tr>
+    <td><font size="3px" face="Verdana" color="black";>HP</td>
+    <td><font size="3px" face="Verdana" color="black";;>value</td>
+  </tr>
+  <tr>
+    <td><font size="3px" face="Verdana" color="black";>SP Attack</td>
+    <td><font size="3px" face="Verdana" color="black";>value</td>
+  </tr>
+  <tr>
+    <td><font size="3px" face="Verdana" color="black";>SP Defense</td>
+    <td><font size="3px" face="Verdana" color="black";>value</td>
+  </tr>
+  <tr>
+    <td><font size="3px" face="Verdana" color="black";>Speed</td>
+    <td><font size="3px" face="Verdana" color="black";>value</td>
+  </tr>
+  <tr>
+    <td><font size="3px" face="Verdana" color="black";>Weight</td>
+    <td><font size="3px" face="Verdana" color="black";>value</td>
+  </tr>
+  <tr>
+    <td><font size="3px" face="Verdana" color="black";>Total moves</td>
+    <td><font size="3px" face="Verdana" color="black";>value</td>
+  </tr>
+  </table>
+    </div>
+</div>
+
+ </div>
+
+</body>
 </html>

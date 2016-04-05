@@ -1,16 +1,26 @@
 $( document ).ready(function() {
-    $(".holder").click(function(event){
-  $("#Pokemon-details").html($(event.target).children(".hidden-info").html());
-  })
-
-var row = function(name, v){
-  return '<tr><td>' + name + '</td><td>' + v + '</td></tr>'
+  for(var i=1; i<19; i++){
+   renderPokemonFromAPI(i)
+  }
+  $(".pokemon").click(renderProfile)
+});
+var renderProfile = function(event){
+  $("#rectangle-profile").html($(event.target).children(".hidden-info").html());
 }
-
-var currentInfo = {}
-
+    
+  var statisticRow = function(label, value) {
+  resalt = '<tr><td><font size="3px" face="Verdana" color="black";>'+label+
+  '</font></td><td><font size="3px" face="Verdana" color="black";>'+value+'</font></td></tr>'
+  return resalt; 
+  }
+var content = '<img src="http://pokeapi.co/media/img/19.png">\
+<div>'
+var table = '</div>\
+<table border="1" style="width:100%">'
+var tableEnd = '</table>'
+var currentInfo={}
 var parseData = function(d){
-  currentInfo.name = d.name
+    currentInfo.name = d.name
     currentInfo.weight = d.weight
     types = []
     for(var i = 0; i < d.types.length; i++) {
@@ -21,65 +31,52 @@ var parseData = function(d){
     for(var i = 0; i < d.stats.length; i++) {
       currentInfo[d.stats[i].stat.name] = d.stats[i].base_stat
     }
-}
-
-for(var i = 1; i < 13; i++) {
-  $.get("http://pokeapi.co/api/v2/pokemon/" +i, function (data){
-    for (var z = 0; z < data.types.length; z++) {
-      data.types[z].type.name
-      $("#pokemon-" + (data.id)).html(data.name);     
-      }
-
-    parseData(data);
-    $('#profile-table').html(
-      '<table>' +
-      row('Name', currentInfo.name) +
-      row('Type', currentInfo.types[0]) +
-      row('Attack', currentInfo.attack) +
-      row('Defense', currentInfo.defense) +
-      row('HP', currentInfo.hp) +
-      row('SP Attack', currentInfo['special-attack']) +
-      row('SP Defense', currentInfo['special-defense']) +
-      row('Speed', currentInfo.speed) +
-      row('Weight', currentInfo.weight) +
-      row('Total Moves', currentInfo.totalMoves) +
-      '</table>'
-    )
-
-    for(var y = 0; y < data.types.length; y++) {
+  }
+var  renderPokemonFromAPI = function(id){
+$.get( "http://pokeapi.co/api/v2/pokemon/"+id, function( data ) {
+    $( "#rectangle"+data.id+" .name").html( data.name );
+    console.log(data); 
+    console.log("#rectangle"+data.id+" .name");
+  parseData(data)
+  var profileImage = '<img src="http://pokeapi.co/media/img/'+data.id+'.png"><div>'
+  var profileTable = table + 
+    statisticRow('Type', currentInfo.types[0]) + 
+    statisticRow('Attack', currentInfo.attack) + 
+    statisticRow('Defense', currentInfo.defense) + 
+    statisticRow('HP', currentInfo.hp) + 
+    statisticRow('SP Attack', currentInfo['special-attack']) + 
+    statisticRow('SP Defense', currentInfo['special-defense']) + 
+    statisticRow('Speed', currentInfo.speed) + 
+    statisticRow('Weight', currentInfo.weight) + 
+    statisticRow('Total moves', currentInfo.totalMoves) + 
+    tableEnd
+  $( "#rectangle"+data.id+" .hidden-info" ).html( profileImage+data.name+" "+"#"+data.id+profileTable );
+  $(".pokemon").click(renderProfile);
+  for(var y = 0; y < data.types.length; y++) {
       data.types[y].type.name
       prefContent = $("#ability-" + (data.id)).html()
       typeContent = prefContent + "<div class=\""+ data.types[y].type.name +" type\">"+ data.types[y].type.name +"</div>"
       $("#ability-" + (data.id)).html(typeContent);
-      }
-    })
-  }
-})
-
-/*function displ(loadMore) {
-  if (document.getElementById(loadMore).style.display == 'none') {
-    document.getElementById(loadMore).style.display = 'block'} 
-    else {document.getElementById(loadMore).style.display = 'none'} 
-};*/
-
-
-
-
-
-/*$(function(){
-var previous = "none";
-$(".form").click(function(e){
-  current = $(e.target).parents(".form").children(".pokemon-name").children("input").val();
-  $("#character").html($(e.target).parents(".form").children(".hidden-info").html());
-    if(previous == current){
-        $("#character").css('display','none');
-        previous = "none";
-    }else{
-        $("#character").css('display','block');
-        previous = current;
-    }
+    };
   });
-});*/
+};
 
-// Status API Training Shop Blog About
-// © 2016 GitHub, Inc. Terms Privacy Security Co
+var newDivsStart = '\
+<div id="rectangle'
+var newDivsImage = '" class="rectangle pokemon">\
+<img src="http://pokeapi.co/media/img/'
+var newDivsEnd = '.png" width="100" height="100">\
+<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>\
+<div class="hidden-info"></div>\
+</div>\
+'
+  function displ(loadMore) {
+    
+    var visiblePokemonsCount = $('.rectangle').length;
+      for(var i = visiblePokemonsCount; i < (visiblePokemonsCount + 3); i++) {
+      $('#rectangle'+ i).after(newDivsStart + (i+1) + newDivsImage + (i+1) + newDivsEnd)
+      renderPokemonFromAPI(i+1)
+    }
+    $('#rectangle'+ i).after('<br/>')
+    $('#rectangle'+ visiblePokemonsCount).after('<br/>');
+  }
