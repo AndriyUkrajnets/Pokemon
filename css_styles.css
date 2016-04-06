@@ -86,10 +86,10 @@
     border: 1px solid black;
     text-align: center;
     font-family: Verdana, sans-serif;
-    font-size: 18px;
-    font-weight: white;
+    font-size: 21px;
+    font-weight: bold;
     margin: 10px 30px 10px 10px; 
-    padding: 5px 10px 5px 10px;
+    padding: 10px 5px 5px 10px;
     height: 40px;
     width: 620px;
     border-radius: 5px;
