@@ -91,6 +91,4 @@ function displ() {
     $('#rectangle'+ i).after(newDivsStart + (i+1) + newDivsImage + (i+1) + newDivsTypes + (i+1) + newDivsEnd)
     renderPokemonFromAPI(i+1)
   }
-  $('#rectangle'+ i).after('<br/>')
-  $('#rectangle'+ visiblePokemonsCount).after('<br/>');
 }
