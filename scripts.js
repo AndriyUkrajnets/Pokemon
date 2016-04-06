@@ -65,8 +65,10 @@ var newDivsStart = '\
 <div id="rectangle'
 var newDivsImage = '" class="rectangle pokemon">\
 <img src="http://pokeapi.co/media/img/'
-var newDivsEnd = '.png" width="100" height="100">\
+var newDivsTypes = '.png" width="100" height="100">\
 <div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>\
+<div class="abilities" id="ability-'
+var newDivsEnd = '"></div>\
 <div class="hidden-info"></div>\
 </div>\
 '
@@ -74,7 +76,7 @@ var newDivsEnd = '.png" width="100" height="100">\
     
     var visiblePokemonsCount = $('.rectangle').length;
       for(var i = visiblePokemonsCount; i < (visiblePokemonsCount + 3); i++) {
-      $('#rectangle'+ i).after(newDivsStart + (i+1) + newDivsImage + (i+1) + newDivsEnd)
+      $('#rectangle'+ i).after(newDivsStart + (i+1) + newDivsImage + (i+1) + newDivsTypes + (i+1) + newDivsEnd)
       renderPokemonFromAPI(i+1)
     }
     $('#rectangle'+ i).after('<br/>')
