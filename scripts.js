@@ -15,10 +15,10 @@ $( document ).ready(function() {
     $('.' + currentType).parents('.rectangle').show()
     displayedType = currentType
   }
-  });
+  })
 });
 var renderProfile = function(event){
-  $("#rectangle-profile").html($(event.target).children(".hidden-info").html());
+  $("#rectangle-profile").html($(event.target).children(".hidden-info").html()).show();
 }
     
   var statisticRow = function(label, value) {
@@ -85,13 +85,12 @@ var newDivsEnd = '"></div>\
 <div class="hidden-info"></div>\
 </div>\
 '
-  function displ(loadMore) {
-    
-    var visiblePokemonsCount = $('.rectangle').length;
-      for(var i = visiblePokemonsCount; i < (visiblePokemonsCount + 3); i++) {
-      $('#rectangle'+ i).after(newDivsStart + (i+1) + newDivsImage + (i+1) + newDivsTypes + (i+1) + newDivsEnd)
-      renderPokemonFromAPI(i+1)
-    }
-    $('#rectangle'+ i).after('<br/>')
-    $('#rectangle'+ visiblePokemonsCount).after('<br/>');
+function displ() {
+  var visiblePokemonsCount = $('.rectangle').length;
+    for(var i = visiblePokemonsCount; i < (visiblePokemonsCount + 3); i++) {
+    $('#rectangle'+ i).after(newDivsStart + (i+1) + newDivsImage + (i+1) + newDivsTypes + (i+1) + newDivsEnd)
+    renderPokemonFromAPI(i+1)
   }
+  $('#rectangle'+ i).after('<br/>')
+  $('#rectangle'+ visiblePokemonsCount).after('<br/>');
+}

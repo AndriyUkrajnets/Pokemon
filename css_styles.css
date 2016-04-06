@@ -2,6 +2,17 @@
   display: none;
 }
 
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  width: 50%;
+  float: left;
+}
+
 .rectangle {
     font-family: Verdana, sans-serif;
     padding: 30px;
@@ -14,6 +25,7 @@
     box-shadow: 2px 2px 2px #888888;
 }
 #rectangle-profile {
+    display: none;
     border: 1px solid black;
     font-family: Verdana, sans-serif;
     position:fixed;
@@ -23,13 +35,18 @@
     top:195px;
     border-radius: 2px;
     box-shadow: 2px 2px 2px #888888;
-    
 }
 .pokedexHead {
-    border: 1px solid black;
+    border: 2px solid black;
     font-family: Verdana, sans-serif;
-    margin:10px 500px 10px 500px;   
-    padding: 3px 10px 3px 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+    margin-left: 150px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
     text-align: center;
     font-size: 50px; 
     border-radius: 2px;
@@ -45,7 +62,6 @@
 .div200{    
     width: 50%;
     min-height: 150px;
-    background: ;
     float: left;
     color: black;
     text-align: center;
@@ -53,6 +69,11 @@
 }
 .name{    
     text-transform: capitalize;
+    width:auto; 
+    height:auto; 
+    position:relative; 
+    float:none;
+    font-weight: bold;
 }
 .pokemnDisplay{    
     text-align: center;
@@ -66,13 +87,17 @@
 #LoadMore{
     border: 1px solid black;
     text-align: center;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
     margin: 10px 30px 10px 10px; 
-    padding: 10px 20px 10px 20px;
+    padding: 5px 10px 5px 10px;
     height: 20px;
-    width: 490px;
+    width: 620px;
     border-radius: 2px;
-    box-shadow: 2px 2px 2px #888888;
-    background-color: #3366FF
+    box-shadow: 3px 3px 3px #0066CC;
+    background-color: #3366FF;
+    cursor: pointer;
  }
 
 .abilities{
@@ -90,58 +115,59 @@
   border: 1px solid #ddd;
   margin: 0 8px 8px 8px;
   text-transform: capitalize;
+  cursor: pointer;
 }
 .electric{
-  background-color: #F8D030;
+  background-color: #FFFF00;
 }
 .poison{
-  background-color: #A040A0;
+  background-color: #9900FF;
 }
 .grass{
-  background-color: #78C850;
+  background-color: #33FF00;
 }
 .fire{
-  background-color: #F08030;
+  background-color: #FF3300;
 }
 .bug{
-  background-color: #A8B820;
+  background-color: #CC9900;
 }
 .water{
-  background-color: #6890F0;
+  background-color: #003399;
 }
 .flying{
-  background-color: #A890F0;
+  background-color: #CC0000;
 }
 .normal{
-  background-color: #A8A878;
+  background-color: #FFFF99;
 }
 .fighting{
   background-color: #C03028;
 }
 .ground{
-  background-color: #E0C068;
+  background-color: #333300;
 }
 .psychic{
-  background-color: #F85888;
+  background-color: #9999FF;
 }
 .rock{
-  background-color: #B8A038;
+  background-color: #000033;
 }
 .ice{
-  background-color: #98D8D8;
+  background-color: #99CCCC;
 }
 .dragon{
-  background-color: #7038F8;
+  background-color: #780000;
 }
 .ghost{
-  background-color: #705898;
+  background-color: #FFFF66;
 }
 .dark{
-  background-color: #705848;
+  background-color: #FF9900;
 }
 .steel{
-  background-color: #B8B8D0;
+  background-color: #CC9999;
 }
 .fairy{
-  background-color: #EE99AC;
+  background-color: #6666CC;
 }
