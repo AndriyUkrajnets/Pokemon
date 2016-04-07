@@ -32,7 +32,7 @@ var statisticRow = function(label, value) {
 var content = '<img src="http://pokeapi.co/media/img/19.png"><div>'
 
 var table = '</div>\
-<table border="1" style="width:100%">'
+<table>'
 
 var tableEnd = '</table>'
 
