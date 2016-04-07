@@ -29,7 +29,6 @@
   width: 300px;
   height:500px;
   right:250px;
-/*  top:195px;*/
   border-radius: 2px;
   box-shadow: 2px 2px 2px #888888;
 }
@@ -62,7 +61,8 @@
   text-align: center;
   text-transform: capitalize;
 }
-.name{    
+.name{
+  text-align: center;    
   text-transform: capitalize;
   width:auto; 
   height:auto; 

@@ -29,8 +29,7 @@ var statisticRow = function(label, value) {
   return resalt; 
   }
 
-var content = '<img src="http://pokeapi.co/media/img/19.png">\
-<div>'
+var content = '<img src="http://pokeapi.co/media/img/19.png"><div>'
 
 var table = '</div>\
 <table border="1" style="width:100%">'
@@ -76,7 +75,7 @@ $.get( "http://pokeapi.co/api/v2/pokemon/"+id, function( data ) {
   for(var y = 0; y < data.types.length; y++) {
       data.types[y].type.name
       prefContent = $("#ability-" + (data.id)).html()
-      typeContent = prefContent + "<div class=\""+ data.types[y].type.name +" type\">"+ data.types[y].type.name +"</div>"
+      typeContent = prefContent + '<div class="'+ data.types[y].type.name +' type">'+ data.types[y].type.name +"</div>"
       $("#ability-" + (data.id)).html(typeContent);
     };
   });
@@ -85,17 +84,13 @@ $.get( "http://pokeapi.co/api/v2/pokemon/"+id, function( data ) {
 var newDivsStart = '\
 <div id="item'
 
-var newDivsImage = '" class="item pokemon">\
-<img src="http://pokeapi.co/media/img/'
+var newDivsImage = '" class="item pokemon"><img src="http://pokeapi.co/media/img/'
 
 var newDivsTypes = '.png" width="100" height="100">\
-<div class="name" align="center" style="width:auto; height:auto; position:relative; float:none;"></div>\
+<div class="name"></div>\
 <div class="abilities" id="ability-'
 
-var newDivsEnd = '"></div>\
-<div class="hidden-info"></div>\
-</div>\
-'
+var newDivsEnd = '"></div><div class="hidden-info"></div></div>'
 function displ() {
   var visiblePokemonsCount = $('.item').length;
     for(var i = visiblePokemonsCount; i < (visiblePokemonsCount + 3); i++) {
