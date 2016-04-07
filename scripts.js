@@ -58,7 +58,7 @@ $.get( "http://pokeapi.co/api/v2/pokemon/"+id, function( data ) {
     console.log(data); 
     console.log("#item"+data.id+" .name");
   parseData(data)
-  var profileImage = '<img src="http://pokeapi.co/media/img/'+data.id+'.png"><div>'
+  var profileImage = '<img src="http://pokeapi.co/media/img/'+data.id+'.png" width="150" height="150"><div>'
   var profileTable = table + 
     statisticRow('Type', currentInfo.types[0]) + 
     statisticRow('Attack', currentInfo.attack) + 

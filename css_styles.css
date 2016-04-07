@@ -114,15 +114,14 @@
 table, td {
   border: 1px solid black;
   border-collapse: collapse;
-  font-size: 3px;
   font-family: Verdana;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: normal;
 }
 table {
   width: 260px;
   height: 300px;
-  margin-top: 40px;
+  margin-top: 5px;
   margin-bottom: 10px;
   margin-right: 20px;
   margin-left: 20px;
@@ -134,7 +133,7 @@ table {
   float: none;
   font-size: 4px; 
   font-family: Verdana;
-  font-size: 18px;
+  font-size: 20px;
 }
 .electric{
   background-color: #FFFF00;
