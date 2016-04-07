@@ -104,8 +104,7 @@
 }
 .pokemon-image{
   border: 20px;
-  margin: 10px 20px 0 80px;
-  align:center; 
+  margin: 10px 20px 0 80px; 
   width:auto; 
   height:auto; 
   position:relative; 

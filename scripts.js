@@ -10,7 +10,7 @@ $( document ).ready(function() {
     if(displayedType == currentType){
       $('.item').show()
       displayedType = ''
-    } 
+    }
     else {
     $('.item').hide()
     $('.' + currentType).parents('.item').show()
@@ -26,13 +26,12 @@ var renderProfile = function(event){
 var statisticRow = function(label, value) {
   resalt = '<tr><td><font size="3px" face="Verdana" color="black";>'+label+
   '</font></td><td><font size="3px" face="Verdana" color="black";>'+value+'</font></td></tr>'
-  return resalt; 
+  return resalt;
   }
 
 var content = '<img src="http://pokeapi.co/media/img/19.png"><div>'
 
-var table = '</div>\
-<table>'
+var table = '</div><table>'
 
 var tableEnd = '</table>'
 
