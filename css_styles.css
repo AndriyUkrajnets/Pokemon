@@ -69,6 +69,8 @@
   display: none;
   border: 1px solid black;
   font-family: Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
   position:fixed;
   width: 300px;
   height:500px;
@@ -101,14 +103,21 @@
   font-weight: bold;
 }
 .pokemon-image{
-border: 20px;
-margin: 10px 20px 0 80px;
+  border: 20px;
+  margin: 10px 20px 0 80px;
+  align:center; 
+  width:auto; 
+  height:auto; 
+  position:relative; 
+  float:none;
 }
 table, td {
   border: 1px solid black;
   border-collapse: collapse;
   font-size: 3px;
   font-family: Verdana;
+  font-size: 12px;
+  font-weight: normal;
 }
 table {
   width: 260px;
@@ -118,7 +127,15 @@ table {
   margin-right: 20px;
   margin-left: 20px;
 }
-
+#pokemon-details{
+  width: auto;
+  height: auto;
+  position: relative;
+  float: none;
+  font-size: 4px; 
+  font-family: Verdana;
+  font-size: 18px;
+}
 .electric{
   background-color: #FFFF00;
 }
