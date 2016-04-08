@@ -30,7 +30,7 @@ var statisticRow = function(label, value) {
   return resalt;
   }
 
-var content = '<img src="http://pokeapi.co/media/img/19.png"><div>'
+var content = ''
 
 var table = '</div><table>'
 
@@ -85,7 +85,7 @@ var newDivsStart = '<div id="item'
 
 var newDivsImage = '" class="item pokemon"><img src="http://pokeapi.co/media/img/'
 
-var newDivsTypes = '.png"><div class="name"></div><div class="lable" id="lable-'
+var newDivsTypes = '.png" alt="Pokemon image"><div class="name"></div><div class="lable" id="lable-'
 
 var newDivsEnd = '"></div><div class="hidden-info"></div></div>'
 function displ() {
