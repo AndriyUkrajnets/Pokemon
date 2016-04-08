@@ -5,14 +5,6 @@ $( document ).ready(function(){
    renderPokemonFromAPI(i)
   }
 
-/*"use strict";
-var displayedType = '';
-
-$( document ).ready(function(){
-  "use strict";
-  for(var i=1; i<19; i++){
-   renderPokemonFromAPI(i)
-  }*/
   $(".pokemon").click(renderProfile)
   $(document).on('click', '.lable div', function(event){
     var currentType = $(event.target).html()
@@ -61,7 +53,7 @@ var parseData = function(d){
 }
 
 var  renderPokemonFromAPI = function(id){
-$.get( "http://pokeapi.co/api/v2/pokemon/"+id, function( data ) {
+$.get( "http://pokeapi.co/api/v2/pokemon/"+id, function(data) {
     $( "#item"+data.id+" .name").html( data.name );
     console.log(data);
     console.log("#item"+data.id+" .name");
@@ -93,7 +85,7 @@ var newDivsStart = '<div id="item'
 
 var newDivsImage = '" class="item pokemon"><img src="http://pokeapi.co/media/img/'
 
-var newDivsTypes = '.png" width="100" height="100"><div class="name"></div><div class="lable" id="lable-'
+var newDivsTypes = '.png"><div class="name"></div><div class="lable" id="lable-'
 
 var newDivsEnd = '"></div><div class="hidden-info"></div></div>'
 function displ() {

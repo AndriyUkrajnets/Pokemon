@@ -81,10 +81,10 @@
   font-family: Verdana, sans-serif;
   font-size: 18px;
   font-weight: bold;
-  position:fixed;
+  position: fixed;
   width: 300px;
-  height:500px;
-  right:250px;
+  height: 500px;
+  right: 250px;
   border-radius: 2px;
   box-shadow: 2px 2px 2px #888888;
 }
