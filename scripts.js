@@ -53,12 +53,12 @@ var parseData = function(d){
 }
 
 var  renderPokemonFromAPI = function(id){
-$.get( "http://pokeapi.co/api/v2/pokemon/"+id, function(data) {
+$.get( "https://pokeapi.co/api/v2/pokemon/"+id, function(data) {
     $( "#item"+data.id+" .name").html( data.name );
     console.log(data);
     console.log("#item"+data.id+" .name");
   parseData(data)
-  var profileImage = '<img src="http://pokeapi.co/media/img/'+data.id+'.png" width="150" height="150"><div>'
+  var profileImage = '<img src="https://pokeapi.co/media/img/'+data.id+'.png" width="150" height="150"><div>'
   var profileTable = table +
     statisticRow('Type', currentInfo.types[0]) +
     statisticRow('Attack', currentInfo.attack) +
@@ -83,7 +83,7 @@ $.get( "http://pokeapi.co/api/v2/pokemon/"+id, function(data) {
 
 var newDivsStart = '<div id="item'
 
-var newDivsImage = '" class="item pokemon"><img src="http://pokeapi.co/media/img/'
+var newDivsImage = '" class="item pokemon"><img src="https://pokeapi.co/media/img/'
 
 var newDivsTypes = '.png" alt="Pokemon image"><div class="name"></div><div class="lable" id="lable-'
 
