@@ -20,8 +20,14 @@ $( document ).ready(function(){
   })
 });
 
-var renderProfile = function(event){
-  $("#item-profile").html($(event.target).children(".hidden-info").html()).show();
+var renderProfile = function(event) {
+  var content = ''
+  if ($(event.target).hasClass('item')) {
+    content = $(event.target).children(".hidden-info").html();
+  } else {
+    content = $(event.target).parents('.item').children(".hidden-info").html();
+  }
+  $("#item-profile").html(content).show();
 }
 
 var statisticRow = function(label, value) {
@@ -60,7 +66,7 @@ $.get( "https://pokeapi.co/api/v2/pokemon/"+id, function(data) {
   parseData(data)
   var profileImage = '<img src="https://pokeapi.co/media/img/'+data.id+'.png" width="150" height="150"><div>'
   var profileTable = table +
-    statisticRow('Type', currentInfo.types[0]) +
+    statisticRow('Type', currentInfo.types.join(', ')) +
     statisticRow('Attack', currentInfo.attack) +
     statisticRow('Defense', currentInfo.defense) +
     statisticRow('HP', currentInfo.hp) +
