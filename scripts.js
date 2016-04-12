@@ -6,7 +6,7 @@ $( document ).ready(function(){
   }
 
   $(".pokemon").click(renderProfile)
-  $(document).on('click', '.lable div', function(event){
+  $(document).on('click', '.lable', function(event){
     var currentType = $(event.target).html()
     if(displayedType == currentType){
       $('.item').show()
